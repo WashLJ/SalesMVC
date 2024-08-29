@@ -1,12 +1,7 @@
-﻿using Microsoft.EntityFrameworkCore.Storage;
-using Microsoft.IdentityModel.Tokens;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Linq;
-using System.Net.Mail;
-using SalesWebMVC.Models.ViewModels;
-using SalesWebMVC.Services;
 
 namespace SalesWebMVC.Models
 {
@@ -18,16 +13,10 @@ namespace SalesWebMVC.Models
 		[StringLength(60, MinimumLength = 3, ErrorMessage = "{0} size should be between {2} and {1} characters")]
 		public string Name { get; set; }
 
-
-
 		[Required(ErrorMessage = "{0} required")]
 		[EmailAddress(ErrorMessage = "Enter a valid email")]
-		[RegularExpression(@"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$", ErrorMessage = "Invalid pattern.")]
+		[RegularExpression(@"^[^@\s]+@[^@\s]+\.(com|net|org|gov)$", ErrorMessage = "Invalid pattern")]
 		public string Email { get; set; }
-
-
-
-
 
 		[Required(ErrorMessage = "{0} required")]
 		[Display(Name = "Birth Date")]

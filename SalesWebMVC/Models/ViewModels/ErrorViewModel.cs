@@ -1,6 +1,3 @@
-using System;
-using System.Net.Mail;
-
 namespace SalesWebMVC.Models.ViewModels
 {
     public class ErrorViewModel
@@ -9,7 +6,5 @@ namespace SalesWebMVC.Models.ViewModels
         public string Message { get; set; }
 
         public bool ShowRequestId => !string.IsNullOrEmpty(RequestId);
-
-		
 	}
 }

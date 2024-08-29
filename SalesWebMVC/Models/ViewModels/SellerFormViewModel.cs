@@ -1,6 +1,4 @@
-﻿using System.Linq;
-using System.Collections.Generic;
-
+﻿using System.Collections.Generic;
 
 namespace SalesWebMVC.Models.ViewModels
 {
@@ -9,6 +7,5 @@ namespace SalesWebMVC.Models.ViewModels
 
         public Seller Seller { get; set; }
         public ICollection<Department> Departments { get; set; }
-
     }
 }
